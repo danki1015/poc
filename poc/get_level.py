@@ -34,6 +34,6 @@ def get_level(data):
     hasil['Level'] = hasil['final_score_crit'].apply(get_level_category)
 
     # Example dropping unnecessary columns
-    result = hasil.drop(columns=['rev_score_crit', 'subs_score_crit', 'site_score_crit'])
+    result = hasil.drop(columns=['rev_score_crit', 'subs_score_crit', 'site_score_crit', 'No. Regional', 'Regional Name', 'Revenue Hourly', 'Subscriber 4G Hourly', 'Ticket Number','Site ID Uniq Down'])
 
     return result
