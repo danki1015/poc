@@ -1,0 +1,8 @@
+setup.py
+poc/__init__.py
+poc/get_level.py
+poc/get_severity.py
+poc.egg-info/PKG-INFO
+poc.egg-info/SOURCES.txt
+poc.egg-info/dependency_links.txt
+poc.egg-info/top_level.txt
