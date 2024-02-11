@@ -46,7 +46,6 @@ def get_severity(dataseverity):
     indexing['Revenue Hourly'] = indexing['Revenue Hourly']/1000000 
 
     dataseverity = merge(dataseverity, indexing)
-    print(dataseverity)
 
     # Use your functions here
     calculate_score(dataseverity, 'rev', 'revenue_hourly', 'Revenue Hourly', 0.4)
@@ -59,7 +58,11 @@ def get_severity(dataseverity):
     # Apply severity category to final_score and add 'Severity' column to the dataframe
     dataseverity['Severity'] = dataseverity.apply(lambda row: get_severity_category(row['final_score'], row['No. Regional']), axis=1)
 
-    # Drop unnecessary columns from the merged dataframe
-    hasil = dataseverity.drop(columns=['No. Regional', 'Regional Name', 'Revenue Hourly', 'Subscriber 4G Hourly','Site ID Uniq Down'])
-    
+    selected_columns = ['Ticket ID', 'regional', 'Start Time(Create TT_alarm_start_time)',
+                    'Severity(Create TT_severity)', 'revenue_hourly', 'site_id',
+                    'subscriber_4g_hourly', 'rev_score', 'subs_score', 'site_score',
+                    'final_score', 'Severity']
+
+    hasil = dataseverity[selected_columns]
+
     return hasil

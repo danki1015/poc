@@ -30,7 +30,7 @@ data = {
     # 'subs_score': [0.047853, 0.196040, 0.028538, 0.006875, 0.037552],
     # 'site_score': [0.006192, 0.008875, 0.003846, 0.003231, 0.002786],
     # 'final_score': [0.106001, 0.422239, 0.057697, 0.013541, 0.057050],
-    'Severity': ['Low', 'Minor', 'Low', 'Low', 'Low'],
+    # 'Severity': ['Low', 'Minor', 'Low', 'Low', 'Low'],
     # 'final_score_crit': [0.0, 0.0, 0.0, 0.0, 0.0],
     # 'Level': ['SPV', 'Manager', 'SPV', 'SPV', 'SPV']
 }
